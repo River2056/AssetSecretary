@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using AssetSecretary.Db;
+using AssetSecretary.Entities;
 
 namespace AssetSecretary
 {
@@ -12,8 +13,8 @@ namespace AssetSecretary
         {
             using (DbConnectionEntity db = new DbConnectionEntity())
             {
-                List<StockObject> list = db.daily_price.ToList();
-                foreach (StockObject s in list)
+                List<DailyPrice> list = db.DailyPrice.ToList();
+                foreach (DailyPrice s in list)
                 {
                     Console.WriteLine(s.ToString());
                 }
