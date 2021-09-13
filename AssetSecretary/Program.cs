@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using AssetSecretary.Db;
 using AssetSecretary.Entities;
+using PuppeteerSharp;
+using PuppeteerSharp.Input;
 
 namespace AssetSecretary
 {
@@ -11,14 +14,7 @@ namespace AssetSecretary
     {
         static void Main(string[] args)
         {
-            using (DbConnectionEntity db = new DbConnectionEntity())
-            {
-                List<DailyPrice> list = db.DailyPrice.ToList();
-                foreach (DailyPrice s in list)
-                {
-                    Console.WriteLine(s.ToString());
-                }
-            }
+            
         }
     }
 }
