@@ -7,7 +7,7 @@ namespace AssetSecretary.Db
     public class DbConnectionEntity : DbContext
     {
         public DbSet<DailyPrice> DailyPrice { get; set; }
-        public string DbPath { get; set; }
+        private string DbPath { get; set; }
 
         public DbConnectionEntity()
         {
